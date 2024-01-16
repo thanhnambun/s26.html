@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [1,5,6,3,2,1,1,5,6,7]
+        let a = +prompt("nhap so ")  
+        let arr1 = []
+        let b = 0;
+    
+        for (let i = 0; i < arr.length -1; i++){ 
+            let t = 0;
+            for (let j = i; j < arr.length; j++) {   
+                t += arr[j];
+                if (t === a) {
+                    arr1 = arr.slice(i, j + 1);
+                    b = 1;
+                    break;
+                }
+            }
+            if (b) {
+                break;
+            }
+        }
+        console.log(arr1);
+    </script>
+</body>
+</html>
+

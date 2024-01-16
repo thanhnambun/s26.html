@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let array = [1, 2, 3, 4, 5, 2, 3, 4, 6, 7, 7, 8, 9, 9];
+        let count = {};
+
+        for (let i = 0; i < array.length; i++) {
+        let element = array[i];
+        if (count[element]) {
+            count[element]++;
+        } else {
+            count[element] = 1;
+        }
+        }
+
+        for (let key in count) {
+        if (count[key] >= 2) {
+            console.log(key);
+        }
+        }
+    </script>
+</body>
+</html>
